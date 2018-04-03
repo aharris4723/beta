@@ -1,0 +1,11 @@
+<h1>comments show</h1>
+<%= form_with(model: @comment, local: true) do |c| %>
+<%=c.text_area :content%>
+<%=c.hidden_field gathering_id, :value => @gathering.id %>
+<%=c.submit %>
+<% end %>
+
+<% @gatherings.comments.each do |c| %>
+<%= c.content %>
+<%= link_to 'Delete', "/comments/#{c.id}", method: :delete %>
+<% end %>

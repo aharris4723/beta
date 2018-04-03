@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Beta</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+ 
+    <nav class='navbar'>
+      <% if logged_in? %>
+          <li><%= link_to 'Log out', '/logout', {method: 'post'} %></li>
+          <li><a href='/gatherings/new'>New Blog</a></li> 
+       <% end %>
+       
+      <% if !logged_in? %>
+       <li><a href='/login'>Login</a></li> 
+       <% end %>
+       
+      <li><a href='/'>Home</a></li> 
+      <li><a href='/users/new'>New User</a></li>
+      <li><a href='/users'>User's List</a></li>
+    </nav>
+<%= yield %>
+  </body>
+</html>

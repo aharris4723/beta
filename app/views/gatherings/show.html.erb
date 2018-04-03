@@ -1,0 +1,15 @@
+<h2>gathering show page:</h2>
+<%= @gathering.title %>
+
+<hr>
+
+<br>
+<% @comments.each do |c| %>
+<div>
+    <div><a href="<%= "/comments/#{c.id}/edit" %>"><%= c.content %></a></div>
+    
+    <div><%= link_to 'Delete', "/comments/#{c.id}", method: :delete %></div>
+</div>
+
+<%end%>	
+

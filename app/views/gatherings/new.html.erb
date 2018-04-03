@@ -1,0 +1,8 @@
+<h1>gatherings new form</h1>
+
+<%= form_for @gathering do |f| %>
+  
+<div>Title:<%= f.text_field :title %></div><br>
+<div>Gathering: <%= f.text_area :content %></div><br>
+	<%= f.submit %>
+<% end %>

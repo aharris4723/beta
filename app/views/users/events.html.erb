@@ -1,0 +1,17 @@
+<h2>List of all Events</h2>
+<ul>
+  <% @event_list.items.each do |event| %>
+    <li><%= event.summary %> (<%= event.id %>)</li>
+</li><h3><%= event.start.date_time %></h3></li>
+</li><h3><%= event.end.date_time %></h3></li>
+  <% end %>
+</ul>
+
+<hr>
+<%= form_for new_event_url do |f|%>
+<div>Summary<%=f.text_field :summary %> </div>
+
+<div>Time start<%=f.date_field :start %> </div>
+<div>Time end<%= f.date_field :end %> </div>
+  <%= submit_tag 'Add event' %>
+<% end %>
