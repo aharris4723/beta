@@ -22,7 +22,8 @@ class GatheringsController < ApplicationController
     
   end
   
-  def create
+  
+        def create
     @gathering = Gathering.new(gathering_params)
     @gathering.user_id = current_user.id
 
@@ -32,6 +33,7 @@ class GatheringsController < ApplicationController
       render new_gathering_path
     end
   end
+
 
  
   def update

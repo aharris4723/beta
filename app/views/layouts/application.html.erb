@@ -8,7 +8,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<HEADER>
+ <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+
+</HEADER>
   <body>
+    <h1 id="main-h1">MY CIRLCE</h1>
  
     <nav class='navbar'>
       <% if logged_in? %>
@@ -20,10 +25,15 @@
        <li><a href='/login'>Login</a></li> 
        <% end %>
        
-      <li><a href='/'>Home</a></li> 
-      <li><a href='/users/new'>New User</a></li>
-      <li><a href='/users'>User's List</a></li>
+      <li class="navbar"><a href='/'>Home</a></li> 
+      <li class="navbar"><a href='/calendars'>Add to calendar</a></li>
+      <li class="navbar"><a href='/users/new'>New User</a></li>
+      <li class="navbar"><a href='/users'>User's List</a></li>
     </nav>
+
+    <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
 <%= yield %>
   </body>
 </html>

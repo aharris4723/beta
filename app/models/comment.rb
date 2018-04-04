@@ -1,3 +1,3 @@
 class Comment < ApplicationRecord
-	belongs_to :gatherings
+	belongs_to :gathering
 end

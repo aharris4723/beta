@@ -4,6 +4,17 @@
 <hr>
 
 <br>
+<%= form_with(model: @comment, local: true) do |c| %>
+<div>
+    <div><%=c.text_area :content%></div>
+     <div><%= c.hidden_field :gathering_id, :value => @gathering.id %></div>
+   
+    <div><%=c.submit %></div>
+    <% end %>
+</div>
+<hr>
+
+<br>
 <% @comments.each do |c| %>
 <div>
     <div><a href="<%= "/comments/#{c.id}/edit" %>"><%= c.content %></a></div>
@@ -12,4 +23,6 @@
 </div>
 
 <%end%>	
+
+
 
