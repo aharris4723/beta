@@ -1,9 +1,12 @@
 
 <div id="form-wrapper">
+<div>
 <h2>Login</h2>
   <div><%= form_tag(login_path) do  %></div>
+  <div>Email <%= text_field_tag :email %></div>
   <div>Password<%= text_field_tag :password %></div>
   <div><%= submit_tag 'Login' %></div>
 
 <% end %>
+</div>
 </div>

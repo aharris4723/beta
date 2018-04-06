@@ -1,8 +1,8 @@
-<h1 id="gathering-h1">gatherings new form</h1>
+<h3>Create  an event</h3>
 
 <%= form_for @gathering do |f| %>
   
 <div>Title:<%= f.text_field :title %></div><br>
 <div>Gathering: <%= f.text_area :content %></div><br>
-	<%= f.submit %>
+	<div><%= f.submit %></div>
 <% end %>

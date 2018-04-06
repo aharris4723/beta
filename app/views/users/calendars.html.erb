@@ -1,5 +1,4 @@
-<ul>
+
   <% @calendar_list.items.each do |calendar| %>
-    <li><%= calendar.summary %> <a href="/events/<%=calendar.id %>"><%= calendar.id %>)</a></li>
+    <div id="googlecalendars"><%= calendar.summary %> <a href="/events/<%=calendar.id %>"><%= calendar.id %>)</a></div>
   <% end %>
-</ul>

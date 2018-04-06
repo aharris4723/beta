@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Beta</title>
+    <title>myCirlce</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,15 +10,16 @@
 
 <HEADER>
  <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
-
+ <link href="https://fonts.googleapis.com/css?family=Fascinate" rel="stylesheet"> 
 </HEADER>
   <body>
-    <h1 id="main-h1">MY CIRLCE</h1>
+    <h1 id="main-h1">MyCIRLCE</h1>
  
     <nav class='navbar'>
       <% if logged_in? %>
           <li><%= link_to 'Log out', '/logout', {method: 'post'} %></li>
-          <li><a href='/gatherings/new'>New Blog</a></li> 
+          <li><a href='/gatherings/new'>New event</a></li> 
+          
        <% end %>
        
       <% if !logged_in? %>

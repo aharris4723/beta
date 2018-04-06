@@ -1,12 +1,7 @@
-<h1>List of all Users </h1>
+<h3>List of all Users </h3>
 
 
 <% @users.each do |u| %>
 <div><%= u.username %></div>
 <div><%= u.email %></div>
 <% end %>
-
-<hr>
-# <%= form_tag new_event_path(:calendar_id) do %>
- <%= submit_tag 'Add event' %>
- <% end %>

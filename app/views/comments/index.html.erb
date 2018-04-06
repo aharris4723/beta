@@ -1,10 +1,10 @@
 <h1>comments index</h1>
 <% @comments.each do |c| %>
-<%= c.content %>
+<div><%= c.content %></div>
 
 <% end %>
-<h1>COMMENT</h1>
-<%= form_for Comment.new do |f| %>
-<%= f.text_area :content %>
-<%= f.submit %>
+<div><h1>COMMENT</h1></div>
+<div><%= form_for Comment.new do |f| %></div>
+<div><%= f.text_area :content %></div>
+<div><%= f.submit %></div>
 <% end %>

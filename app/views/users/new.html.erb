@@ -1,9 +1,9 @@
-<h2>Create a new User:</h2>
+<h3>Create a new User:</h3>
 
 <%= form_for @user do |f| %>
 
-Username:<%= f.text_field :username %><br>
-Email:<%= f.text_field :email %><br>
-Password:<%= f.text_field :password %><br>
-<%= f.submit %>
+<div>Username:<%= f.text_field :username %><br></div>
+<div>Email:<%= f.text_field :email %><br></div>
+<div>Password:<%= f.text_field :password %><br></div>
+<div><%= f.submit %>
 <% end %>

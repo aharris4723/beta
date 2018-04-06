@@ -33,7 +33,10 @@ class GatheringsController < ApplicationController
       render new_gathering_path
     end
   end
+  def edit
 
+    @comment = Comment.find_by_id(params[:id])
+  end
 
  
   def update

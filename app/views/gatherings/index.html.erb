@@ -1,5 +1,5 @@
-<h3 id="gathering-h1">ALL GATHERINGS</h3>
+<h3>ALL GATHERINGS</h3>
 
 <% @gatherings.each do |c| %>
-    <div><a href='/gatherings/<%= c.id %>'><%= c.title %></a></div>
+    <div id="gatherings"><p><a href='/gatherings/<%= c.id %>'><%= c.title %></a></p></div>
         <% end %>

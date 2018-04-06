@@ -1,28 +1,35 @@
-<h2>gathering show page:</h2>
-<%= @gathering.title %>
+<h3>Gatherings:</h3>
 
-<hr>
-
-<br>
-<%= form_with(model: @comment, local: true) do |c| %>
 <div>
+<div id="gatherings"><p><%= @gathering.title %></p>
+
+<%= form_with(model: @comment, local: true) do |c| %>
+    
     <div><%=c.text_area :content%></div>
      <div><%= c.hidden_field :gathering_id, :value => @gathering.id %></div>
    
     <div><%=c.submit %></div>
+
     <% end %>
 </div>
-<hr>
-
-<br>
-<% @comments.each do |c| %>
-<div>
-    <div><a href="<%= "/comments/#{c.id}/edit" %>"><%= c.content %></a></div>
-    
-    <div><%= link_to 'Delete', "/comments/#{c.id}", method: :delete %></div>
 </div>
+
+
+<% @comments.each do |c| %>
+
+    <div id="username"><%= @user.username %>:said
+    <div id="comments"><p><a href="<%= "/comments/#{c.id}/edit" %>"><%= c.content %></a></p>
+    	
+    	<div><%= link_to 'Delete', "/comments/#{c.id}", method: :delete %></div>
+    
+
+    
+</div>
+
 
 <%end%>	
 
 
+</div>
+<div id="pictures"></div>
 
